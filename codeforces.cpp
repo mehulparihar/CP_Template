@@ -59,36 +59,15 @@ template<typename T>
 T lcm(T a, T b) { return a / gcd(a, b) * b; }
 
 // ------------------------------------------------------------------------------------------------------------------------------ -
-unordered_set<ll> st;
+
 void solution()
 {
-	ll x;
-	cin >> x;
-	// if (x >= 1e12) cout << "NO" << endl;
-	cout << ((st.find(x) != st.end()) ? "YES" : "NO") << endl;
+	
 }
 int32_t main()
 {
-	fastio; debugMode();
+	fastio;
 	debugMode();
-	ll N = 1000001;
-	int arr[N];
-	memset(arr, 0, sizeof arr);
-	arr[1] = 1;
-	for (int i = 2; i * i < N; i++)
-	{
-		if (!arr[i])
-		{
-			for (int j = i * i; j < N; j += i)
-			{
-				arr[j] = 1;
-			}
-		}
-	}
-	for (int i = 2; i < N; i++)
-	{
-		if (!arr[i]) st.insert(1ll * i * i);
-	}
 	ll t;
 	cin >> t;
 	while (t--)
